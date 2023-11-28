@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get "/tags/:id" => "tags#show"
   post "/tags" => "tags#create"
   patch "/tags/:id" => "tags#update"
-  delete "/tags/:id" => "tags#delete"
+  delete "/tags/:id" => "tags#destroy"
   #Posts Routes
   get "/posts/:id" => "posts#show"
   get "/posts" => "posts#index"
