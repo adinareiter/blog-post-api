@@ -9,7 +9,7 @@ class TagsController < ApplicationController
     render :show
   end
 
-  def post
+  def create
     @tag = Tag.create(
       text: params[:text],
     )
