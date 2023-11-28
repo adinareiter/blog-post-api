@@ -16,8 +16,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_28_183555) do
 
   create_table "tags", force: :cascade do |t|
     t.text "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
+    create_table "post_tags", force: :cascade do |t|
+      t.integer "post_id"
+      t.integer "tag_id"
+      t.datetime "created_at", null: false
+      t.datetime "updated_at", null: false
+    end
+  end
 end

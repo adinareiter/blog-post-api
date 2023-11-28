@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get "/tags" => "tags#index"
+  get "/tags/:id" => "tags#show"
+  create "/tags" => "tags#post"
+  patch "/tags/:id" "tags#update"
+  delete "/tags/:id" => "tags#delete"
 end
